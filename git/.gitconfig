@@ -1,0 +1,7 @@
+[user]
+	email = shuklaxd@gmail.com
+	name = Shubham Shukla
+[lfs "customtransfer.xet"]
+	path = git-xet
+	args = transfer
+	concurrent = true
