@@ -133,3 +133,4 @@ if [ -f '/home/shukks/Installs/google-cloud-sdk/path.zsh.inc' ]; then . '/home/s
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/shukks/Installs/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/shukks/Installs/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/home/fitt/.local/bin:/home/fitt/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shukks/.spicetify"
