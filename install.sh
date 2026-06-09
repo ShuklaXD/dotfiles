@@ -241,6 +241,20 @@ install_vim_plugins() {
 }
 
 # ---------------------------------------------------------------------------
+# Set up SSH keys for GitHub + Bitbucket (delegated to ssh/setup-ssh.sh)
+# ---------------------------------------------------------------------------
+setup_ssh_keys() {
+    local script="$DOTFILES_DIR/ssh/setup-ssh.sh"
+    if [ -x "$script" ]; then
+        "$script"
+    elif [ -f "$script" ]; then
+        bash "$script"
+    else
+        warn "ssh/setup-ssh.sh not found — skipping SSH key setup"
+    fi
+}
+
+# ---------------------------------------------------------------------------
 # Set default shell to zsh
 # ---------------------------------------------------------------------------
 set_default_shell() {
@@ -281,6 +295,7 @@ main() {
     install_fzf
     link_dotfiles
     install_vim_plugins
+    setup_ssh_keys
     set_default_shell
 
     echo ""
